@@ -12,7 +12,7 @@ Scenario Outline: Enter Vehicle Data - Form 1 Automobile
  And input data in field Engine Performer "<enginePerformer>"
  And input data in field Date of Manufacture "<dateOfManufacture>"
  And input data in field Number of seats "<numberOfSeats>" 
- And input data in field Righ Hand Drive
+ And input data in field Righ and Drive
  And input data in field Fuel Type "<fuelType>"
  And input data in field List Price "<listPrice>"
  And input data in field Annual Mileage "<annualMileage>"

@@ -18,15 +18,16 @@ RSpec.configure do |config|
   config.before(:example) do 
     page.current_window.resize_to(1280, 800)
   end
+
   config.after(:example) do |e|
-    nome = e.description.gsub(/[^A-Za-z0-9 ]/,'').tr('','_')
-    page.save_screenshot('logs/' + nome + '.png') if e.exception
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/,'').tr(' ','_')
+    page.save_screenshot('log/' + nome + '.png') if e.exception
   end
 end
 
 Capybara.configure do |config|
   config.app_host = 'http://sampleapp.tricentis.com/101/'
   config.default_driver = :selenium_chrome
-  config.default_max_wait_time = 10
+  config.default_max_wait_time = 15
   config.ignore_hidden_elements = false
 end
